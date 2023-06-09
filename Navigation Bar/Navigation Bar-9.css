@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(225, 220, 225);
+}
+.navbar{
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+.navbar ul{
+    overflow: hidden;
+    display: flex;
+    margin-top: 10px;
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 20px 20px;
+    /* display: flex; */
+    justify-content: center;
+}
+.main{
+    padding-left: 515px;
+}
+.navbar li a{
+    padding: 8px 10px;
+    text-decoration: none;
+    color:black;
+
+}
+.img1{
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 100px;
+    
+}
+.icon{
+    padding: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    color: black;
+}
+.icon i{
+    padding: 10px;
+}
+.menu select{
+    border: none;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: none;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.content, .content2, .content3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content{
+    margin-top: 100px;
+}
+#h1:visited{
+    color: blue;
+}
+.apple ul,.image ul, .bose ul, .bose1 ul, .sony ul, .sony1 ul{
+    list-style-type: none;
+}
+.container ul li{
+    margin: 20px;
+}
+.container h3{
+    margin: 20px;
+}
+.content{
+    margin-top: 50px;
+}

@@ -1,0 +1,18 @@
+.first h1{
+    display: flex;
+    justify-content: center;
+}
+.second{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    justify-content: center;
+}
+.second button{
+    padding: 20px;
+    margin: 20px;
+    background-color: skyblue;
+    color:black;
+    border-radius: 25px;
+    font-size: large;
+    font-weight: 700;
+}

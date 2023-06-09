@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(225, 220, 225);
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+.navbar ul{
+    overflow: hidden;
+    display: flex;
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    padding-left: 400px;
+
+}
+.navbar li a{
+    padding: 8px 10px;
+    text-decoration: none;
+    color:black;
+
+}
+.img1{
+    /* height: 30px; */
+    /* width: 150px; */
+    margin-top: 10px;  
+    margin-left: 430px;
+}
+.icon{
+    padding: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin-left: 75px;
+    margin-right: 80px;
+
+}
+.menu ul{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.menu ul li{
+    display: inline;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    color: black;
+}
+.icon i{
+    padding: 10px;
+}
+.Search i{
+    position: absolute;
+    margin: 12px;
+    margin-left: 220PX;
+}
+.Search input{
+    float: right;
+    color: black;
+    padding: 9px 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: medium;
+    cursor: pointer;
+}
+.Search{
+    margin-left: 300px;
+    margin-top: 10px;
+}
+.menu ul img{
+    
+}
