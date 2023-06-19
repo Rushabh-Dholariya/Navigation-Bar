@@ -26,7 +26,7 @@ let age = [20,45,16,36,22];
 let age1 = age.every((age)=>{
     return age >16
 });
-document.write(age1 +"<br>");
+document.write(age1 +"<br   >");
 
 
 
@@ -36,4 +36,4 @@ document.write("<h1>join-method</h1>");
 
 let joins = ["Rushabh","Yash","Chirag","Jay"];
 let joins1 = joins.join(" & ");
-document.write(joins1 +"<br>");
+document.write(joins1 +"<br >");
