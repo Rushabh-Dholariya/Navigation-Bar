@@ -89,7 +89,3 @@ fetch("product.json")
   })
 
   .catch((error) => console.log(error));
-
-
-
-  
