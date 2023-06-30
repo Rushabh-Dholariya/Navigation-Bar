@@ -4,7 +4,7 @@ fetch("product.json")
     var result = data.result;
     var productContainer = document.getElementById("productContainer");
 
-    // All Product Liss
+    // All Product List
     var countDisplay = document.getElementById("All");
     var approve = result.filter(function (product) {
       return product.status === "approved";
@@ -87,5 +87,5 @@ fetch("product.json")
     }
     renderProductCards(result);
   })
-
   .catch((error) => console.log(error));
+
