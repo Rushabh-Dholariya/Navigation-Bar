@@ -52,7 +52,7 @@ body {
 .product-price {
   border: 3px solid rgb(76, 158, 76);
   border-radius: 4px;
-  padding: 5px;
+  padding: 0px;
   color: rgb(76, 158, 76);
   font-weight: bold;
 }
@@ -92,7 +92,7 @@ button:focus {
 
 .product-title {
   color: blue;
-  width: 150px;
+  width: 50%;
   font-weight: 600px;
   /* font-size: 14px; */
 }
@@ -144,8 +144,4 @@ button:focus {
 hr {
   margin: 8px 0;
 }
-
-
-
-
 

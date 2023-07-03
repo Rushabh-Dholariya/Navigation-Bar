@@ -4,38 +4,19 @@ fetch("product.json")
     var result = data.result;
     var productContainer = document.getElementById("productContainer");
 
-    // All Product List
-    var countDisplay = document.getElementById("All");
-    var approve = result.filter(function (product) {
-      return product.status === "approved";
-    });
-    countDisplay.innerHTML = `Approve Status: ${approve.length}`;
-    countDisplay.addEventListener("click", function () {
-      renderProductCards(approve);
-    });
-
-    // Only Show Reviews
-    var clickReviews = document.getElementById("reviews");
-    var emptyReviews = result.filter(function (product) {
-      return product.status === "pending";
-    });
-    clickReviews.innerHTML = `Pending status: ${emptyReviews.length}`;
-    clickReviews.addEventListener("click", function () {
-      renderProductCards(emptyReviews);
-    });
-    // Only Show NoReviews
-    var clickShowBadReview = document.getElementById("showBadReviews");
-    var badReviews = result.filter(function (product) {
-      return product.status === "decline";
-    });
-    clickShowBadReview.innerHTML = `Declinne status: ${badReviews.length}`;
-
-    clickShowBadReview.addEventListener("click", function () {
-      var noReviews = result.filter(function (product) {
-        return product.status === "decline";
+    function updateCountAndRender(status, elementId) {
+      var countDisplay = document.getElementById(elementId);
+      var filteredProducts = result;
+      if (status !== "result") {
+        filteredProducts = result.filter(function (product) {
+          return product.status === status;
+        });
+      }
+      countDisplay.innerHTML = `${status} Status: ${filteredProducts.length}`;
+      countDisplay.addEventListener("click", function () {
+        return renderProductCards(filteredProducts);
       });
-      renderProductCards(noReviews);
-    });
+    }
 
     function renderProductCards(products) {
       productContainer.innerHTML = "";
@@ -64,28 +45,32 @@ fetch("product.json")
         // innerHTML
         var card = document.createElement("div");
         card.innerHTML = `<div class="product-card">
-        <img class="img" src="${product.image[product.image.length - 1]}" />
-        <div class="display" style="padding:10px;">
-          <div class="container">
-              <div class="product-title">${product.title}</div>
-              <div><span class="product-price">${
-                product.price[0].number +
-                " " +
-                product.price[0].currency.slice(0, 1)
-              }</span></div>
-          </div>
-          <div class="product-location">${product.location}</div>
-          <div class="dateRating">
-            <div class="product-currDate">${date}</div>
-            <div class="product-rating">${ratingStars}</div>
-          </div>
-        </div>
-    </div>`;
+        <img class="img" src="${product.image[product.image.length - 1]}" /> 
+            <div class="display" style="padding:10px;">
+             <div class="container">
+                <div class="product-title">${product.title}</div>
+                    <div><span class="product-price">${
+                       product.price[0].number +
+                         " " +
+                         product.price[0].currency
+                       }</span></div>
+                    </div>
+                 <div class="product-location">${product.location}</div>
+                 <div class="dateRating">
+                   <div class="product-currDate">${date}</div>
+                   <div class="product-rating">${ratingStars}</div>
+                 </div>
+             </div>
+           </div>`;
 
         productContainer.appendChild(card);
       });
     }
+    updateCountAndRender("result", "defaults");
+    updateCountAndRender("approved", "All");
+    updateCountAndRender("pending", "reviews");
+    updateCountAndRender("decline", "showBadReviews");
     renderProductCards(result);
   })
-  .catch((error) => console.log(error));
 
+  .catch((error) => console.log(error));
