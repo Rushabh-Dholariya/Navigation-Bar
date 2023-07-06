@@ -2,6 +2,6 @@
 
 Live url link: https://rushabh-dholariya.github.io/Navigation-Bar/
 
-Task list:
+Task list: BootStrap Task
 
-- Buttons, Badges, Progress Bars, Images, Table, Spinners, Pagination, List groups
+- Service four Card Create,AboutUs four Image set and about us content and button create, Food Menu and items list create

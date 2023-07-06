@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ff-secondary{
+    font-family: 'pacifico',cursive;
+}
+.rest{
+    background-image: linear-gradient(rgba(15,23,43,.9),rgba(15,23,43,.9)), url("img/bg-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+.service{
+    box-shadow: 0 0 45px rgba(0, 0, 0, .10);
+}
+.col-6 img{
+    transition: transform .2s;
+  }
+  
+.col-6 img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
