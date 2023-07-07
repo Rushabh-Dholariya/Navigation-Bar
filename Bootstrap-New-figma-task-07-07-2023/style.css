@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn-outline{
+    border-color: #EC994B;
+    color: #EC994B;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+}
+.btn-light{
+    background-color: #EC994B;
+    color: #fff;
+    border-radius: 30px;
+    height: 45px;
+    width: 100px;
+}
+.btn{
+    background-color: #EC994B;
+    color: #fff;
+    border-radius: 30px;
+    height: auto;
+    width: auto;
+}
