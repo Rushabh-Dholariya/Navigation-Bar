@@ -17,10 +17,32 @@
     height: 45px;
     width: 100px;
 }
-.btn{
+.btn-1{
     background-color: #EC994B;
     color: #fff;
     border-radius: 30px;
     height: auto;
     width: auto;
+    text-decoration: none;
+}
+.one{
+    top: 46rem;
+}
+.two{
+    top: 44.5rem;   
+}
+.three{
+    top: 43rem;   
+}
+.container{
+    display: flex;
+    margin-top: 60px;
+}
+.review{
+    display: flex;
+    position:absolute;
+    left: 17rem;
+}
+.heading{
+    color: #EC994B;
 }
