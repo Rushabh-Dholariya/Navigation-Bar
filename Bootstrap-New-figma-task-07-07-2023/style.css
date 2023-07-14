@@ -46,3 +46,46 @@
 .heading{
     color: #EC994B;
 }
+.round-img-1{
+    position: absolute;
+    right: 23rem;
+}
+.main-img{
+    position: absolute;
+}
+.box{
+    position: absolute;
+    right: 0rem;
+    width: 25rem;
+    top: 15px;
+    border: none;
+}
+.box1{
+    position: absolute;
+    left: 0rem;
+    width: 25rem;
+    top: 300px;
+    border: none;
+}
+.imgs-1{
+    position: relative;
+    top: 100px;
+}
+.img-2{
+    position: absolute;
+    top: 280px;
+    left: 26rem;
+}
+.img-3{
+    position: relative;
+    margin-right: 50rem;
+}
+.img-4{
+    position: relative;
+    top: 280px;
+    height: 8rem;
+}
+.six{
+    top: 1000px;
+}
+
