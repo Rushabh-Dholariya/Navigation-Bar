@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 .btn-outline{
     border-color: #EC994B;
@@ -46,24 +47,27 @@
 .heading{
     color: #EC994B;
 }
+
+/* fifth page */
+  
 .round-img-1{
     position: absolute;
-    right: 23rem;
+    right: 18rem;
 }
 .main-img{
     position: absolute;
 }
 .box{
     position: absolute;
-    right: 0rem;
-    width: 25rem;
+    right: -1rem;
+    width: 21rem;
     top: 15px;
     border: none;
 }
 .box1{
     position: absolute;
     left: 0rem;
-    width: 25rem;
+    width: 21rem;
     top: 300px;
     border: none;
 }
@@ -74,7 +78,7 @@
 .img-2{
     position: absolute;
     top: 280px;
-    left: 26rem;
+    left: 22rem;
 }
 .img-3{
     position: relative;
@@ -88,4 +92,16 @@
 .six{
     top: 1000px;
 }
-
+.jay{
+    height: 47rem;
+}
+/* six page */
+.bimg{
+    bottom:3.5rem;
+}
+.star{
+    margin-right: 1rem;
+}
+.sl{
+   margin-left: 6rem;
+}
