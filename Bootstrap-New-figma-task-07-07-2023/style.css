@@ -105,3 +105,30 @@
 .sl{
    margin-left: 6rem;
 }
+
+
+
+/* seven page */
+.seven-input{
+    height: 3.5rem;
+    width: 25rem;
+}
+.seven-btn{
+    height: 3.5rem;
+    width: 5rem;
+}
+.seven-text{
+    margin-top: 10rem;
+}
+
+/* footer */
+.jay1 ul li a{
+    color: white !important;
+    margin: 1rem;
+}
+
+.jay1{
+    color: white !important;
+    margin-top: 2rem;
+}
+
