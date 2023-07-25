@@ -36,13 +36,14 @@
     top: 43rem;   
 }
 .container{
-    display: flex;
-    margin-top: 60px;
+    /* display: flex; */
+    top: 10px;
 }
 .review{
     display: flex;
-    position:absolute;
-    left: 17rem;
+    position:relative;
+    left: 10rem;
+    top: 4.5rem;
 }
 .heading{
     color: #EC994B;
@@ -110,8 +111,8 @@
 
 /* seven page */
 .seven-input{
-    height: 3.5rem;
-    width: 25rem;
+    height:0.5rem;
+    padding: 2rem;
 }
 .seven-btn{
     height: 3.5rem;
@@ -133,7 +134,7 @@
 }
 /* new */
  
-html, body, main {
+main{
   width: 100%;
   height: 100%;
   margin: 0;
@@ -141,7 +142,7 @@ html, body, main {
 }
 
 #carousel {
-  position: relative;
+  position: relative;  
   height: 400px;
   top: 50%;
   transform: translateY(-50%);
@@ -162,7 +163,7 @@ html, body, main {
   transform: translateY(50%) translateX(-50%);
 }
 #carousel div.hideLeft img {
-  width: 200px;
+  width: 20px;
 }
 #carousel div.hideRight {
   left: 100%;
@@ -213,9 +214,8 @@ html, body, main {
 }
 
 .buttons {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
+  position: relative;
+  top: 5rem;
+  text-align: center;
 }
 
