@@ -18,64 +18,134 @@
       href="    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
     "
     />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="Carousel.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        function moveToSelected(element) {
+          if (element == "next") {
+            var selected = $(".selected").next();
+          } else if (element == "prev") {
+            var selected = $(".selected").prev();
+          } else {
+            var selected = element;
+          }
+
+          var next = $(selected).next();
+          var prev = $(selected).prev();
+          var prevSecond = $(prev).prev();
+          var nextSecond = $(next).next();
+
+          $(selected).removeClass().addClass("selected");
+
+          $(prev).removeClass().addClass("prev");
+          $(next).removeClass().addClass("next");
+
+          $(nextSecond).removeClass().addClass("nextRightSecond");
+          $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+          $(nextSecond).nextAll().removeClass().addClass("hideRight");
+          $(prevSecond).prevAll().removeClass().addClass("hideLeft");
+        }
+
+        // Eventos teclado
+        $(document).keydown(function (e) {
+          switch (e.which) {
+            case 37: // left
+              moveToSelected("prev");
+              break;
+
+            case 39: // right
+              moveToSelected("next");
+              break;
+
+            default:
+              return;
+          }
+          e.preventDefault();
+        });
+
+        $("#carousel div").click(function () {
+          moveToSelected($(this));
+        });
+
+        $("#prev").click(function () {
+          moveToSelected("prev");
+        });
+
+        $("#next").click(function () {
+          moveToSelected("next");
+        });
+      });
+    </script>
   </head>
+
   <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="img/F&D.jpg" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-5 fw-bold ms-auto py-0 pe-4 mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <div class="me-3">
-            <img src="img/Group 2.jpg" alt="" />
+        <div class="row-6">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="img/F&D.png" alt="" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                  class="navbar-nav me-5 fw-bold ms-auto py-0 pe-4 mb-2 mb-lg-0"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+                <div class="me-3">
+                  <img src="img/Group 2.png" alt="" />
+                </div>
+                <form class="me-3 mb-2 mt-2">
+                  <button class="btn btn-outline" type="submit">
+                    Register
+                  </button>
+                </form>
+                <form class="me-0 mb-2 mt-2">
+                  <button class="btn btn-light" type="submit">Login</button>
+                </form>
+              </div>
+            </nav>
           </div>
-          <form class="me-3 mb-2 mt-2">
-            <button class="btn btn-outline" type="submit">Register</button>
-          </form>
-          <form class="me-0 mb-2 mt-2">
-            <button class="btn btn-light" type="submit">Login</button>
-          </form>
         </div>
       </div>
-    </nav>
+    </div>
 
     <!-- first page -->
-    <div class="container-fluid py-5 text-dark rest mb-5">
-      <div class="container my-5 py-5">
+    <div class="container py-5 text-dark rest mb-5">
+      <div class="container-fluid my-5 py-5">
         <div class="row align-items-center g-5">
           <div class="col-lg-6 img-content text-center text-lg-start">
             <h1 class="display-1 text-dark fw-bold">
@@ -94,23 +164,33 @@
             <div class="container">
               <div class="one z-0 position-absolute m-0 rounded-3">
                 <span
-                  ><img src="img/Ellipse 13.jpg" class="rounded-circle" alt=""
+                  ><img
+                    src="img/Ellipse 13.png"
+                    class="img-fluid rounded-circle"
+                    alt=""
                 /></span>
               </div>
               <div class="two z-1 position-absolute m-4 rounded-3">
                 <span
-                  ><img src="img/Ellipse 14.jpg" class="rounded-circle" alt=""
+                  ><img
+                    src="img/Ellipse 14.png"
+                    class="img-fluid rounded-circle"
+                    alt=""
                 /></span>
               </div>
               <div class="three z-2 position-absolute m-5 mb-5 rounded-3">
                 <span
-                  ><img src="img/Ellipse 15.jpg" class="rounded-circle" alt=""
+                  ><img
+                    src="img/Ellipse 15.png"
+                    class="img-fluid rounded-circle"
+                    alt=""
                 /></span>
               </div>
               <div class="review">
                 <h5>
                   Customer Review <br />
-                  <img src="img/star.jpg" alt="" /> 4.8 (5k reviews)
+                  <img class="img-fluid" src="img/star.png" alt="" /> 4.8 (5k
+                  reviews)
                 </h5>
               </div>
             </div>
@@ -118,7 +198,7 @@
           <div
             class="col-lg-6 img-content text-center text-lg-end overflow-hidden"
           >
-            <img class="img-fluid" src="img/Group 25.jpg" alt="" />
+            <img class="img-fluid" src="img/Group 25.png" alt="" />
           </div>
         </div>
       </div>
@@ -130,11 +210,27 @@
         <div class="row align-items-center d-flex">
           <div class="col-lg-12">
             <h6 class="text-center">Support by :</h6>
-            <img src="img/Mask group.jpg" class="p-5 m-3" alt="" />
-            <img src="img/Mask group (1).jpg" class="p-5 m-3" alt="" />
-            <img src="img/Mask group (2).jpg" class="p-5 m-3" alt="" />
-            <img src="img/Mask group (3).jpg" class="p-5 m-3" alt="" />
-            <img src="img/Mask group (4).jpg" class="p-5 m-3" alt="" />
+            <img src="img/Mask group.png" class="p-5 m-3 img-fluid" alt="" />
+            <img
+              src="img/Mask group (1).png"
+              class="p-5 m-3 img-fluid"
+              alt=""
+            />
+            <img
+              src="img/Mask group (2).png"
+              class="p-5 m-3 img-fluid"
+              alt=""
+            />
+            <img
+              src="img/Mask group (3).png"
+              class="p-5 m-3 img-fluid"
+              alt=""
+            />
+            <img
+              src="img/Mask group (4).png"
+              class="p-5 m-3 img-fluid"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -142,8 +238,8 @@
 
     <!-- therd page -->
 
-    <div class="container-fluid py-4">
-      <div class="container">
+    <div class="container py-4">
+      <div class="container-fluid">
         <div class="row g-3">
           <div class="text-center">
             <h6 class="heading">- Our Services -</h6>
@@ -152,7 +248,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="service pt-3">
               <div class="p-4">
-                <img src="img/pana1.jpg" alt="" />
+                <img src="img/pana1.png" class="img-fluid" alt="" />
                 <h4>Master Chefs</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur</p>
               </div>
@@ -161,7 +257,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="service pt-3">
               <div class="p-4">
-                <img src="img/pana.jpg" alt="" />
+                <img src="img/pana.png" class="img-fluid" alt="" />
                 <i class=""></i>
                 <h4>Quality Food</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur</p>
@@ -171,7 +267,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="service pt-3">
               <div class="p-4">
-                <img src="img/amico.jpg" alt="" />
+                <img src="img/amico.png" class="img-fluid" alt="" />
                 <h4>Online Order</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur</p>
               </div>
@@ -183,39 +279,57 @@
 
     <!-- four page -->
 
-    <div id="carousel">
-      <div class="hideLeft">
-        <img src="img/Group 1 (1).jpg" />
-      </div>
+    <div class="container py-4">
+      <div class="container-fluid">
+        <div class="row g-3">
+          <div class="col-lg-12">
+            <div class="text-center">
+              <h6 class="heading">- Popular Delivery -</h6>
+              <h1 class="fw-bold">Trending food</h1>
+            </div>
+            <main>
+              <div id="carousel">
+                <div class="hideLeft">
+                  <img src="img/Rectangle 13.png" />
+                </div>
 
-      <div class="prevLeftSecond">
-        <img src="img/Group 1 (2).jpg" />
-      </div>
+                <div class="prevLeftSecond">
+                  <img src="img/Group 6356113.png" />
+                </div>
 
-      <div class="prev">
-        <img src="img/Group 1 (3).jpg" />
-      </div>
+                <div class="prev">
+                  <img src="img/Group 6356111.png" />
+                </div>
 
-      <div class="selected">
-        <img src="img/Group 1 (4).jpg" />
-      </div>
+                <div class="selected">
+                  <img src="img/Group 6356104.png" />
+                </div>
 
-      <div class="next">
-        <img src="img/Group 1 (5).jpg" />
-      </div>
+                <div class="next">
+                  <img src="img/Group 6356108.png" />
+                </div>
 
-      <div class="nextRightSecond">
-        <img src="img/Group 1 (1).jpg" />
-      </div>
-    </div>
+                <div class="nextRightSecond">
+                  <img src="img/Group 6356114.png" />
+                </div>
 
-    <div class="buttons">
-      <button id="prev">Prev</button>
-      <button id="next">Next</button>
+                <div class="hideRight">
+                  <img src="img/Rectangle 12.png" />
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- fifth page -->
-
+    
     <div class="jay container py-5">
       <div class="container-fluid text-center mt-3">
         <div class="row-6">
@@ -225,27 +339,27 @@
             <div class="imgs-1 d-flex justify-content-center">
               <img
                 class="main-img img-fluid"
-                src="img/Ellipse 290.jpg"
+                src="img/Ellipse 290.png"
                 alt=""
               />
               <img
-                class="round-img-1 rounded-circle me-5"
-                src="img/Ellipse 291.jpg"
+                class="img-fluid round-img-1 rounded-circle me-5"
+                src="img/Ellipse 291.png"
                 alt="..."
               />
               <img
-                class="img-2 rounded-circle"
-                src="img/Ellipse 292.jpg"
+                class="img-fluid img-2 rounded-circle"
+                src="img/Ellipse 292.png"
                 alt=""
               />
               <img
-                class="img-3 rounded-circle"
-                src="img/Ellipse 295.jpg"
+                class="img-fluid img-3 rounded-circle"
+                src="img/Ellipse 295.png"
                 alt=""
               />
               <img
-                class="img-4 rounded-circle"
-                src="img/Ellipse 296.jpg"
+                class="img-fluid img-4 rounded-circle"
+                src="img/Ellipse 296.png"
                 alt=""
               />
               <div class="box card text-start shadow bg-white">
@@ -276,9 +390,13 @@
       <div class="container-fluid">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <img class="position-absolute" src="img/Rectangle 14.png" alt="" />
             <img
-              class="bimg position-relative"
+              class="position-absolute img-fluid"
+              src="img/Rectangle 14.png"
+              alt=""
+            />
+            <img
+              class="bimg position-relative img-fluid"
               src="img/damian-barczak-j-jXnBFahhU-unsplash-removebg-preview.png"
               alt=""
             />
@@ -291,12 +409,12 @@
             <div class="sub pt-3 pb-3">
               <img
                 class="rounded-circle float-start"
-                src="img/Ellipse 289.jpg"
+                src="img/Ellipse 289.png"
                 alt=""
               />
               <img
                 class="rounded-circle float-end"
-                src="img/Group 6356126.jpg"
+                src="img/Group 6356126.png"
                 alt=""
               />
               <h4 class="sl fw-bold">Erick Smith</h4>
@@ -311,7 +429,7 @@
             <div>
               <p class="fw-bold">
                 5.0
-                <img class="star" src="img/Group 6356089.jpg" alt="" />
+                <img class="star" src="img/Group 6356089.png" alt="" />
               </p>
             </div>
           </div>
@@ -324,7 +442,7 @@
     <div class="container-fluid">
       <div class="row" style="background-color: #ec994b">
         <div class="col-lg-6 mt-5">
-          <img class="ms-xxl-5 p-4" src="img/amico2.png" alt="" />
+          <img class="ms-xxl-5 p-4 img-fluid" src="img/amico2.png" alt="" />
         </div>
         <div class="seven-text col-lg-6 img-content text-start text-lg-start">
           <h1 class="display-3 text-light fw-bold">
@@ -339,9 +457,9 @@
           </div>
           <div>
             <input
-              class="seven-input"
+              class="seven-input overflow-hidden"
               type="text"
-              placeholder="     Your Email Address"
+              placeholder="Your Email Address"
             />
             <button class="seven-btn bg-black text-light ms-3" type="submit">
               Get
@@ -359,7 +477,9 @@
             href="/"
             class="d-flex align-items-center mb-3 link-dark text-decoration-none"
           ></a>
-          <p class="text-muted ms-4"><img src="img/F&D.png" alt="" /></p>
+          <p class="text-muted img-fluid ms-4">
+            <img src="img/F&D.png" alt="" />
+          </p>
           <i
             class="fa-brands fa-facebook fa-2x bg-dark rounded-circle m-3"
             style="color: #e2e2e2"
@@ -444,13 +564,4 @@
       </footer>
     </div>
   </body>
-
-  <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-
 </html>
