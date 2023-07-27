@@ -35,15 +35,16 @@
 .three{
     top: 43rem;   
 }
-.container{
+.container1{
     /* display: flex; */
     top: 10px;
+    position: absolute;
 }
 .review{
     /* display: flex; */
     position:relative;
     left: 10rem;
-    top: 4.5rem;
+    top: 46.5rem;
 }
 .heading{
     color: #EC994B;
@@ -55,6 +56,10 @@
     position: absolute;
     right: 18rem;
 } */
+.rush{
+  position: absolute;
+  top: 0;
+}
 @media screen and (max-width:1200px) {
   .abc
   {
