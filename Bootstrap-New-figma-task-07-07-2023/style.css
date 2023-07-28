@@ -35,14 +35,16 @@
 .three{
     top: 43rem;   
 }
-.container{
-    display: flex;
-    margin-top: 60px;
+.container1{
+    /* display: flex; */
+    top: 10px;
+    position: absolute;
 }
 .review{
-    display: flex;
-    position:absolute;
-    left: 17rem;
+    /* display: flex; */
+    position:relative;
+    left: 10rem;
+    top: 46.5rem;
 }
 .heading{
     color: #EC994B;
@@ -50,52 +52,74 @@
 
 /* fifth page */
   
-.round-img-1{
+/* .round-img-1{
     position: absolute;
     right: 18rem;
+} */
+.rush{
+  position: absolute;
+  top: 0;
 }
-.main-img{
+@media screen and (max-width:1200px) {
+  .abc
+  {
     position: absolute;
+    right:4rem;
+  }
+}
+.fifth-imgs{
+    position: relative;
+    /* top: 100px; */
+}
+.fifth-main-img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.abc{
+  position: absolute;
+  right: 3rem;
+  z-index: 1;
+  display: flex;
+  gap: 1rem ;
+  
+}
+.fifth-img-2{
+    position: absolute;
+    /* top: 280px; */
+    /* left: 22rem; */
+}
+.fifth-img-3{
+    position: absolute;
+    /* margin-right: 50rem; */
+}
+.fifth-img-4{
+    position: absolute;
+    /* top: 20rem; */
+    /* height: 8rem; */
 }
 .box{
-    position: absolute;
-    right: -1rem;
-    width: 21rem;
-    top: 15px;
-    border: none;
+  
+  
+  width: 21rem;
+  top: 15px;
+  border: none;
 }
 .box1{
-    position: absolute;
-    left: 0rem;
-    width: 21rem;
-    top: 300px;
-    border: none;
+  position: absolute;
+  left: 0rem;
+  width: 21rem;
+  top: 300px;
+  border: none;
 }
-.imgs-1{
-    position: relative;
-    top: 100px;
-}
-.img-2{
-    position: absolute;
-    top: 280px;
-    left: 22rem;
-}
-.img-3{
-    position: relative;
-    margin-right: 50rem;
-}
-.img-4{
-    position: relative;
-    top: 280px;
-    height: 8rem;
-}
+
+/* six page */
 .six{
     top: 1000px;
 }
 .jay{
     height: 47rem;
 }
-/* six page */
 .bimg{
     bottom:3.5rem;
 }
@@ -110,8 +134,8 @@
 
 /* seven page */
 .seven-input{
-    height: 3.5rem;
-    width: 25rem;
+    height:0.5rem;
+    padding: 2rem;
 }
 .seven-btn{
     height: 3.5rem;
@@ -130,5 +154,98 @@
 .jay1{
     color: white !important;
     margin-top: 2rem;
+}
+/* new */
+ 
+main{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#carousel {
+  position: relative;  
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+#carousel div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+#carousel div img {
+  width: 400px;
+  transition: width 1s;
+}
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideLeft img {
+  width: 20px;
+}
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideRight img {
+  width: 200px;
+}
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel div.prev img {
+  width: 300px;
+}
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel div.next img {
+  width: 300px;
+}
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.nextRightSecond img {
+  width: 200px;
+}
+
+.buttons {
+  position: relative;
+  top: 5rem; 
+  text-align: center;
+}
+.buttons1{
+  background-color: #EC994B;
+  color: #fff;
+  border-radius: 30px;
+  height: 45px;
+  width: 100px;
 }
 
