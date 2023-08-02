@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.font-1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+
+.font-2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+
+.font-3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+}
+
+.font-3-1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.font-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.font-5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.font-6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.btn-1 {
+    border-radius: 5px;
+    background: var(--3, linear-gradient(158deg, #D10ED1 0%, #10A3DA 100%));
+    height: 54px;
+    width: 173px;
+    color: #fff;
+}
+
+.btn-2 {
+    border-radius: 5px;
+    border-color: var(--3, linear-gradient(158deg, #D10ED1 0%, #10A3DA 100%));
+    height: 54px;
+    width: 173px;
+}
+
+.mult-color {
+    background: var(--2, linear-gradient(158deg, #F86CF8 0%, #64CEF5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img1 {
+    width: 566px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
