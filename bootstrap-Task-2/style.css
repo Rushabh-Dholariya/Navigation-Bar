@@ -43,7 +43,7 @@
     font-weight: 600;
 }
 
-.GetStarted {
+.getstarted {
     border-radius: 5px;
     background: var(--3, linear-gradient(158deg, #D10ED1 0%, #10A3DA 100%));
     height: 54px;
@@ -51,7 +51,7 @@
     color: #fff;
 }
 
-.ExploreNow {
+.explorenow {
     border-radius: 5px;
     border-color: var(--3, linear-gradient(158deg, #D10ED1 0%, #10A3DA 100%));
     height: 54px;
@@ -65,11 +65,11 @@
     -webkit-text-fill-color: transparent;
 }
 
-.frem1 {
+/* .frem1 {
     width: 566px;
     height: 200px;
     flex-shrink: 0;
-}
+} */
 
 /* second page */
 
