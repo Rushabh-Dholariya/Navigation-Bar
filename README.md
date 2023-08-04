@@ -6,5 +6,5 @@
 
  * Figma link : https://www.figma.com/file/jGCiTvzitsm2Oj4mTlCjxX/Metaverse-Web-UI-(Community)?node-id=0%3A1&mode=dev 
 
- *  create card responsiv.
+ *  create card responsiv & button bprder .
  
