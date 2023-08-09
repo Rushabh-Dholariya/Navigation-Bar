@@ -76,7 +76,7 @@
       </nav>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="page1 col-lg-6">
             <div class="firstpage text-light mt-5 py-5">
               <h2 class="display-5 font-3 fw-bold">
                 Explore the future of the<span class="mult-color font-3-1 ms-2"
@@ -98,49 +98,38 @@
                 </button>
               </form>
               <div class="box1 d-flex gap-4">
-                <div class="mt-5">
+                <div class="review1 mt-5">
                   <h3 class="font-2">29K+</h3>
                   <p class="font-4">Artworks</p>
                 </div>
-                <div class="mt-5">
+                <div class="review2 mt-5">
                   <h3 class="font-2">18K+</h3>
                   <p class="font-4">Artists</p>
                 </div>
-                <div class="mt-5">
+                <div class="review3 mt-5">
                   <h3 class="font-2">25K+</h3>
                   <p class="font-4">Auction</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="firstpage text-light py-4">
+          <div class="col-lg-6 mt-5">
+            <div class="firstpage1 text-light py-4">
               <div>
                 <img
-                  class="position-absolute img-fluid"
-                  style="
-                    right: 0px;
-                    top: 80px;
-                    height: 760px;
-                    width: 1032px;
-                    flex-shrink: 0;
-                  "
+                  class="elip7 position-absolute img-fluid"
+                  style="right: 0px; top: 80px; flex-shrink: 0"
                   src="img/Ellipse 7.png"
                   alt=""
                 />
                 <img
-                  class="img-fluid position-absolute py-5 mt-lg-5"
+                  class="img-fluid position-absolute py-5 mt-lg-5 d-none d-md-flex"
                   src="img/Vector.png"
                   alt=""
                 />
+                <img class="eximg2 img-fluid" src="img/image 2.png" alt="" />
                 <img
-                  class="img-fluid"
-                  src="img/image 2.png"
-                  alt=""
-                  style="width: 566px; height: auto; flex-shrink: 0"
-                />
-                <img
-                  class="img-fluid position-static position-absolute"
+                  class="img-fluid position-static position-absolute d-none d-md-flex"
                   src="img/Rectangle 69.png"
                   alt=""
                   style="
@@ -163,16 +152,16 @@
     <!-- second page -->
     <div class="">
       <img
-        class="start-0 position-absolute img-fluid"
-        style="height: auto; width: auto; top: 15%"
+        class="elip6 start-0 position-absolute img-fluid"
+        style="top: 20rem"
         src="img/Ellipse 6.png"
         alt=""
       />
     </div>
     <div class="container">
       <div class="row">
-        <!-- <div class="col-12 col-sm-6" style="height: 68vh">
-          <div class="position-relative">
+        <div class="col-12 col-sm-6" style="height: 68vh">
+          <!-- <div class="position-relative">
             <div class="p-2" style="width: fit-content">
               <img
                 src="img/Rectangle 70.png"
@@ -192,8 +181,8 @@
                 style="object-fit: cover; aspect-ratio: 1"
               />
             </div>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
 
         <div class="col-lg-6">
           <div class="text-light mt-5 py-5">
@@ -240,10 +229,11 @@
               class="position-absolute end-0"
               src="img/Ellipse 9.png"
               alt=""
+              style="top: 50rem;"
             />
           </div>
-          <div class="text-center">
-            <h2 class="font-3 text-light mt-5" style="font-size: 35px">
+          <div class="therd text-lg-center text-sm-start">
+            <h2 class="font-3 text-light mt-5 " style="font-size: 35px">
               How does the
               <span class="mult-color font-3-1 ms-2">Metaverse work</span>
             </h2>
@@ -627,7 +617,15 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="text-center p-5">
+          <div class="">
+            <img
+              class="elip10 position-absolute start-0"
+              src="img/Ellipse 10.png"
+              alt=""
+              style="top: 130rem;"
+            />
+          </div>
+          <div class=" text-lg-center text-sm-start p-5">
             <h2 class="font-3 text-light mt-5" style="font-size: 35px">
               Our Latest
               <span class="mult-color font-3-1 ms-2">Activity</span>
@@ -640,28 +638,60 @@
           </div>
 
           <div class="fourth-video text-center">
-            <div class="active w-100">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/EPrDP6LNnGU"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-              <div class="text-white">rushabh dholariya</div>
-            </div>
-            <div class="">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/EPrDP6LNnGU"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="1"
+                ></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <iframe
+                    width="560"
+                    src="https://www.youtube.com/embed/EPrDP6LNnGU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="carousel-item">
+                  <iframe
+                    width="560"
+                    src="https://www.youtube.com/embed/EPrDP6LNnGU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="prev"
+              >
+                <!-- <span class="carousel-control-prev-icon"></span> -->
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="next"
+              >
+                <!-- <span class="carousel-control-next-icon"></span> -->
+              </button>
             </div>
           </div>
 
@@ -681,13 +711,13 @@
               <div
                 class="text-1 my-4 d-flex flex-row justify-content-between align-items-center"
               >
-                <div class="text font-3 text-white">Metaverse Fashion Week</div>
+                <div class="text font-3 text-white" style="font-size: 25px;">Metaverse <br> Fashion Week</div>
                 <div class="icon"><i class="fa-solid fa-play"></i></div>
               </div>
             </div>
 
             <div class="d-flex flex-column">
-              <div class="img">
+              <div class="img11">
                 <iframe
                   width=""
                   height="315"
@@ -701,17 +731,82 @@
               <div
                 class="text-1 my-4 d-flex flex-row justify-content-between align-items-center"
               >
-                <div class="text font-3 text-white">
-                  Online Travel demonstration
+                <div class="text font-3 text-white" style="font-size: 25px;">
+                  Online Travel <br> demonstration
                 </div>
-                <div class="icon"><i class="fa-solid fa-play fa-2x"></i></div>
+                <div class="icon"><i class="fa-solid fa-play"></i></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="">
+      <img
+        class="elip11 position-absolute end-0"
+        src="img/Ellipse 11.png"
+        alt=""
+        style="top: 160rem;"
+      />
+    </div>
     <!-- Footer -->
+
+    <div class="container-fluid my-3" style="background-color: #090823">
+      <footer class="text-center text-lg-start text-white">
+        <div class="container">
+          <section class="text-start">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
+                <a href="" class="navbar-brand">
+                  <img src="img/MetaV.png" height="35" alt="" />
+                </a>
+                <p class="mt-4 text-sm-start font-4">
+                  Adipiscing at in tellus integer. Pellentesque massa <br />
+                  placerat duis ultricies lacus. Nisi porta lorem mollis <br />
+                  aliquam ut porttitor
+                </p>
+              </div>
+
+              <div
+                class="footers col-md-4 col-lg-2 col-xl-2 col-sm-6 mx-auto mt-3"
+              >
+                <h5 class="mb-4 font-3-1">About Us</h5>
+                <ul class="font-4">
+                  <li>About MetaV</li>
+                  <li>Contact Us</li>
+                  <li>FAQ</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Service</li>
+                </ul>
+              </div>
+              <div
+                class="footers col-md-4 col-lg-2 col-xl-2 col-sm-6 mx-auto mt-3"
+              >
+                <h5 class="mb-4 font-3-1">Services</h5>
+                <ul class="font-4">
+                  <li>NFT Marketplace</li>
+                  <li>Virtual Concert</li>
+                  <li>Gaming</li>
+                  <li>Artwork</li>
+                  <li>Online Travel</li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="mb-4 font-3-1 d-none d-md-flex">Contact</h5>
+                <ul class="font-4">
+                  <div class="">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter ms-3"></i>
+                    <i class="fa-brands fa-instagram ms-3"></i>
+                    <i class="fa-brands fa-square-facebook ms-3"></i>
+                  </div>
+                  <li>2022 © MetaV.com All right reserved.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
-
